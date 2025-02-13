@@ -97,7 +97,7 @@ function startHeartAnimation() {
           clearInterval(e);
           setTimeout(openPopup, 1500);
         }
-      }, 25);
+      }, 50);
     });
     return this;
   };
