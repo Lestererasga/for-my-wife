@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>My Message for my Wife</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      @font-face {
+        font-family: digit;
+        src: url("digital-7_mono.ttf") format("truetype");
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="css/default.css" type="text/css" rel="stylesheet" />
+    <link rel="icon" href="img/flowers.png" type="image/x-icon" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+  </head>
+
+  <body>
+    <div id="mainDiv">
+      <div id="content">
+        <div id="code">
+          <span class="comments">/**</span><br />
+          <span class="space" /><span class="comments"
+            >* My Dearest Zandra,</span
+          ><br /><br />
+          <span class="space" /><span class="comments"
+            >* On this special Valentine's Day, I find myself reflecting on the
+            beautiful journey we’ve shared, and I feel an overwhelming sense of
+            gratitude and love. Every day with you is a gift, and I am
+            incredibly blessed to have you by my side.</span
+          ><br /><br />
+          <span class="space" /><span class="comments"
+            >* From the moment we first met, I knew my life would never be the
+            same. You have been my strength, my partner, and my best friend. The
+            love we’ve built together is my greatest achievement, and I am so
+            proud of everything we’ve created — our memories, our dreams, and
+            the beautiful life we’re continuing to build.</span
+          ><br /><br />
+          <span class="space" /><span class="comments"
+            >* Looking back on all the moments, from the simple ones to the big
+            milestones, I realize how deeply my love for you has grown. Every
+            day, I’m in awe of your kindness, your intelligence, your warmth,
+            and the way you bring joy to everyone around you. I feel incredibly
+            lucky to be the one who gets to spend my life with you.</span
+          ><br /><br />
+          <span class="space" /><span class="comments"
+            >* You’ve taught me what true love is — the kind that is patient,
+            supportive, and everlasting. Even in the toughest of times, I’ve
+            known that with you, I can face anything. You’ve made me a better
+            person, and I will forever be grateful for your unwavering love and
+            support.</span
+          ><br /><br />
+          <span class="space" /><span class="comments"
+            >* As we continue this journey together, I want you to know that I
+            will always be here for you — through all the ups and downs, the
+            laughter and tears, the quiet moments and the grand adventures. You
+            are the love of my life, and I promise to cherish you every day, as
+            I always have, and more.</span
+          ><br /><br />
+          <span class="space" /><span class="comments"
+            >* Thank you for being my partner, my love, my everything. I look
+            forward to spending the rest of my days with you, growing together
+            and making more beautiful memories.</span
+          ><br /><br />
+          <span class="space" /><span class="comments"
+            >* I love you forever and always.</span
+          ><br /><br />
+          <span class="space" /><span class="comments">* Yours forever,</span
+          ><br />
+          <span class="space" /><span class="comments">* Lester</span><br />
+          <span class="space" /><span class="comments">*/</span><br />
+        </div>
+
+        <div id="loveHeart">
+          <canvas id="garden"></canvas>
+          <div id="words">
+            <div id="messages">
+              Zandra Mae, I have fallen in love with you for
+              <div id="elapseClock"></div>
+            </div>
+            <div id="loveu">
+              Love u forever and ever.<br />
+              <div class="signature">- Lester</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        Copyright © 2025
+        <a href="https://lestererasga.github.io/3d-portfolio">Lester Erasga</a></div>
+      </div>
+      <br/>
+    </div>
+<div id="popup" class="popup-class">
+  <div class="popup-header">Surprise</div>
+  <div id="popbody" class="popup-body">
+    <b>I LOVE YOU!!!</b> 💗💗 <br/> Flowers for you!
+  </div>
+  <div class="popup-footer">
+    <button class="popup-button" onclick="redirectToFlower()">Click Me</button>
+  </div>
+</div>
+
+    <script type="text/javascript">
+      var offsetX = $("#loveHeart").width() / 2;
+      var offsetY = $("#loveHeart").height() / 2 - 55;
+      var together = new Date();
+      together.setFullYear(2016, 8, 5);
+      together.setHours(20);
+      together.setMinutes(0);
+      together.setSeconds(0);
+      together.setMilliseconds(0);
+
+      if (!document.createElement("canvas").getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML =
+          "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none");
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+      } else {
+        setTimeout(function () {
+          startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function () {
+          timeElapse(together);
+        }, 500);
+
+        adjustCodePosition();
+        $("#code").typewriter();
+      }
+    </script>
+  </body>
+</html>
